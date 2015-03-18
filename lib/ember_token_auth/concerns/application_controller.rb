@@ -1,3 +1,4 @@
+require 'jwt'
 module EmberTokenAuth
   module ApplicationController
     extend ActiveSupport::Concern

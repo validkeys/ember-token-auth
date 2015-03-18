@@ -1,5 +1,8 @@
 module EmberTokenAuth
   class SessionsController < ::ApplicationController
+
+    before_filter :authenticate!, only: :token_refresh
+
     def token
       user = User.authenticate(params[:email], params[:password])
       if user
@@ -17,8 +20,7 @@ module EmberTokenAuth
     private
 
     def generate_token(user)
-      # exp = 30.days.from_now.to_i
-      exp     = (Time.now + 15).to_i
+      exp     = 30.days.from_now.to_i
       payload = { user: user.jwt_params, exp: exp }
       JWT.encode(payload, Rails.configuration.secret_token)
     end
