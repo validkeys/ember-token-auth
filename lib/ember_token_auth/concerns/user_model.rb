@@ -4,10 +4,13 @@ module EmberTokenAuth
 
     included do
       has_secure_password
+
+      validates_presence_of :email
+      validates_uniqueness_of :email
     end
 
     def jwt_params
-      self.slice(:id, :email, :name, :created_at)
+      self.slice(:id, :email, :created_at)
     end
 
     module ClassMethods
