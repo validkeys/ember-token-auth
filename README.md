@@ -32,3 +32,13 @@ Then in your user model, include the user concern
 ```ruby
 include EmberTokenAuth::UserModel
 ```
+
+Then in your user controller, include the user controller concern
+```ruby
+include EmberTokenAuth::UserController
+```
+
+### Todo
+
+* Automatically include the above concerns in the proper controllers and models
+* Currently relies on email and password fields. Should make these config options (ex. username)
