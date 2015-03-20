@@ -35,7 +35,7 @@ include EmberTokenAuth::UserModel
 
 Then in your user controller, include the user controller concern
 ```ruby
-include EmberTokenAuth::UserController
+include EmberTokenAuth::UsersController
 ```
 
 ### Todo
