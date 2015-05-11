@@ -7,11 +7,11 @@ require "ember_token_auth/version"
 Gem::Specification.new do |s|
   s.name        = "ember_token_auth"
   s.version     = EmberTokenAuth::VERSION
-  s.authors     = ["TODO: Your name"]
-  s.email       = ["TODO: Your email"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of EmberTokenAuth."
-  s.description = "TODO: Description of EmberTokenAuth."
+  s.authors     = ["Kyle Davis"]
+  s.email       = ["validkeys@gmail.com"]
+  s.homepage    = "http://buildlab.co"
+  s.summary     = "Contains the logic to login users"
+  s.description = "Contains the logic to login users"
   s.license     = "MIT"
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
